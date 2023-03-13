@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rumus Segitiga &#8212; Welcome To My Jupyter</title>
+    <title>Rumus Segitiga &#8212; 21-001 Achmad Baharuddin Akbar</title>
   
   
   
@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugaspendat/percobaan';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+    <link rel="prev" title="Welcome to My Jupyter Book" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -139,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/IMG_20210303_164705_672.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/IMG_20210303_164705_672.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/Picsart_23-03-13_16-26-12-205.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/Picsart_23-03-13_16-26-12-205.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -150,7 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to your Jupyter Book
+                    Welcome to My Jupyter Book
                 </a>
             </li>
         </ul>
@@ -356,9 +356,11 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menginput Alas dan Tinggi Segitiga</span>
-<span class="n">alas</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Tulis Alas Segitiga: &#39;</span><span class="p">))</span>
-<span class="n">tinggi</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Tulis Tinggi Segitiga: &#39;</span><span class="p">))</span>
- 
+<span class="n">alas</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">tinggi</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alas =&#39;</span><span class="p">,</span><span class="n">alas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tinggi =&#39;</span><span class="p">,</span><span class="n">tinggi</span><span class="p">)</span>
+
 <span class="c1"># Hitung Luas Segitiga</span>
 <span class="n">luas</span> <span class="o">=</span> <span class="p">(</span><span class="n">alas</span> <span class="o">*</span> <span class="n">tinggi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
  
@@ -368,22 +370,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">StdinNotImplementedError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">b13ee18d139b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Menginput Alas dan Tinggi Segitiga</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">alas</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Tulis Alas Segitiga: &#39;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">tinggi</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Tulis Tinggi Segitiga: &#39;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Hitung Luas Segitiga</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">--&gt; </span><span class="mi">857</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Alas = 10
+Tinggi = 5
+Luas Segitiga adalah 25.00
 </pre></div>
 </div>
 </div>
@@ -424,7 +413,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Welcome to My Jupyter Book</p>
       </div>
     </a>
 </div>
