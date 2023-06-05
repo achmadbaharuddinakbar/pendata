@@ -1,0 +1,1387 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS PENAMBANGAN DATA &#8212; 21-001 Achmad Baharuddin Akbar</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugaspendat/UTS';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tugas 3 : Decision Tree" href="Tugas3.html" />
+    <link rel="prev" title="Tugas 2 : Naive Bayes Iris Dataset" href="Tugas2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Picsart_23-03-13_16-26-12-205.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/Picsart_23-03-13_16-26-12-205.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to My Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="percobaan.html">Rumus Segitiga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas1.html">Tugas 1 : Mengukur Jarak</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas2.html">Tugas 2 : Naive Bayes Iris Dataset</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">UTS PENAMBANGAN DATA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas3.html">Tugas 3 : Decision Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas4.html">Tugas 4 : Multilayer Perceptron (MLP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas5.html">Tugas 5 : PCA with iris dataset</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugaspendat/UTS.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugaspendat/UTS.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>UTS PENAMBANGAN DATA</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="uts-penambangan-data">
+<h1>UTS PENAMBANGAN DATA<a class="headerlink" href="#uts-penambangan-data" title="Permalink to this heading">#</a></h1>
+<p><strong>Nama : Achmad Baharuddin Akbar</strong></p>
+<p><strong>Nim  : 210411100001</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">transfusion</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/achmadbaharuddinakbar/pendata/DataFile/dataset.csv&quot;</span><span class="p">)</span>
+<span class="n">transfusion</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d0bcba6a-a4ce-48ac-a55a-bef433aa240a">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>cp</th>
+      <th>trestbps</th>
+      <th>chol</th>
+      <th>fbs</th>
+      <th>restecg</th>
+      <th>thalach</th>
+      <th>exang</th>
+      <th>oldpeak</th>
+      <th>slope</th>
+      <th>ca</th>
+      <th>thal</th>
+      <th>target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>63</td>
+      <td>1</td>
+      <td>3</td>
+      <td>145</td>
+      <td>233</td>
+      <td>1</td>
+      <td>0</td>
+      <td>150</td>
+      <td>0</td>
+      <td>2.3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>37</td>
+      <td>1</td>
+      <td>2</td>
+      <td>130</td>
+      <td>250</td>
+      <td>0</td>
+      <td>1</td>
+      <td>187</td>
+      <td>0</td>
+      <td>3.5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>41</td>
+      <td>0</td>
+      <td>1</td>
+      <td>130</td>
+      <td>204</td>
+      <td>0</td>
+      <td>0</td>
+      <td>172</td>
+      <td>0</td>
+      <td>1.4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>56</td>
+      <td>1</td>
+      <td>1</td>
+      <td>120</td>
+      <td>236</td>
+      <td>0</td>
+      <td>1</td>
+      <td>178</td>
+      <td>0</td>
+      <td>0.8</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>57</td>
+      <td>0</td>
+      <td>0</td>
+      <td>120</td>
+      <td>354</td>
+      <td>0</td>
+      <td>1</td>
+      <td>163</td>
+      <td>1</td>
+      <td>0.6</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d0bcba6a-a4ce-48ac-a55a-bef433aa240a')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-d0bcba6a-a4ce-48ac-a55a-bef433aa240a button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-d0bcba6a-a4ce-48ac-a55a-bef433aa240a');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p>Data Information</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">transfusion</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 303 entries, 0 to 302
+Data columns (total 14 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   age       303 non-null    int64  
+ 1   sex       303 non-null    int64  
+ 2   cp        303 non-null    int64  
+ 3   trestbps  303 non-null    int64  
+ 4   chol      303 non-null    int64  
+ 5   fbs       303 non-null    int64  
+ 6   restecg   303 non-null    int64  
+ 7   thalach   303 non-null    int64  
+ 8   exang     303 non-null    int64  
+ 9   oldpeak   303 non-null    float64
+ 10  slope     303 non-null    int64  
+ 11  ca        303 non-null    int64  
+ 12  thal      303 non-null    int64  
+ 13  target    303 non-null    int64  
+dtypes: float64(1), int64(13)
+memory usage: 33.3 KB
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Variable Selection</strong></p>
+<p>Pada tahapan ini, akan dilakukan pemilihan variabel baik untuk variabel independen maupun variabel dependen.</p>
+<p>Variabel independen diberi nama x. Untuk mempermudah maka keluarkan variabel target dari data tersebut dengan fungsi ‘.drop’. Axis =1 yang berarti bahwa semua variabel kecuali variabel target merupakan variabel independen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">transfusion</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;target&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-63802d32-d61f-45ff-b5b8-7a3fbf3370f9">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>cp</th>
+      <th>trestbps</th>
+      <th>chol</th>
+      <th>fbs</th>
+      <th>restecg</th>
+      <th>thalach</th>
+      <th>exang</th>
+      <th>oldpeak</th>
+      <th>slope</th>
+      <th>ca</th>
+      <th>thal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>63</td>
+      <td>1</td>
+      <td>3</td>
+      <td>145</td>
+      <td>233</td>
+      <td>1</td>
+      <td>0</td>
+      <td>150</td>
+      <td>0</td>
+      <td>2.3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>37</td>
+      <td>1</td>
+      <td>2</td>
+      <td>130</td>
+      <td>250</td>
+      <td>0</td>
+      <td>1</td>
+      <td>187</td>
+      <td>0</td>
+      <td>3.5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>41</td>
+      <td>0</td>
+      <td>1</td>
+      <td>130</td>
+      <td>204</td>
+      <td>0</td>
+      <td>0</td>
+      <td>172</td>
+      <td>0</td>
+      <td>1.4</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>56</td>
+      <td>1</td>
+      <td>1</td>
+      <td>120</td>
+      <td>236</td>
+      <td>0</td>
+      <td>1</td>
+      <td>178</td>
+      <td>0</td>
+      <td>0.8</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>57</td>
+      <td>0</td>
+      <td>0</td>
+      <td>120</td>
+      <td>354</td>
+      <td>0</td>
+      <td>1</td>
+      <td>163</td>
+      <td>1</td>
+      <td>0.6</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-63802d32-d61f-45ff-b5b8-7a3fbf3370f9')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-63802d32-d61f-45ff-b5b8-7a3fbf3370f9 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-63802d32-d61f-45ff-b5b8-7a3fbf3370f9');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p>Selanjutnya pilih variabel dependen yang diberi nama y. Variabel dependen pada kasus ini adalah Target.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">transfusion</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">]</span>
+<span class="n">y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1
+1    1
+2    1
+3    1
+4    1
+Name: target, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Spliting Data Train dan Data Test</strong></p>
+<p>Untuk melakukan pembagian data train dan test, pertama perlu mengimport fungsi untuk membagi data dari library scikit-learn. Scikit-Learn memberikan sejumlah fitur untuk keperluan data science.</p>
+<p>Data Heart Disease Prediction akan dibagi menjadi 2 bagian yaitu x test dan x train untuk variabel independen, y test dan y train untuk variabel dependen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Scaling Data</strong></p>
+<p>Menyamakan skala data dengan menggunakan fungsi ‘StandarScaler’ dari package scikit-learn. Teknik Standard Scaler berguna ketika membandingkan data yang sesuai dengan unit yang berbeda. Standard Scaler mengubah data yang sedemikian rupa sehingga distribusinya memiliki nilai rata-rata 0 dan standar deviasi 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>  
+<span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>  
+<span class="n">x_test</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Klasifikasi dengan KNN</strong></p>
+<ul class="simple">
+<li><p>Klasifikasi pertama akan menggunakan KNN, dengan mengimport fungsi KNeighborsClassifier dari package scikit-learn.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Mengaktifkan atau memanggil fungsi klasifikasi KNN</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Memasukkan data training pada fungsi klasifikasi KNN</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier(n_neighbors=8)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">KNeighborsClassifier</label><div class="sk-toggleable__content"><pre>KNeighborsClassifier(n_neighbors=8)</pre></div></div></div></div></div></div></div>
+</div>
+<ul class="simple">
+<li><p>Menentukan hasil prediksi dari x_test yang disebut dengan y prediksi</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+<span class="n">y_pred</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0,
+       1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+       1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menentukan probabilitas hasil prediksi</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.   , 1.   ],
+       [0.875, 0.125],
+       [1.   , 0.   ],
+       [1.   , 0.   ],
+       [0.   , 1.   ],
+       [1.   , 0.   ],
+       [0.125, 0.875],
+       [0.625, 0.375],
+       [0.25 , 0.75 ],
+       [0.25 , 0.75 ],
+       [0.875, 0.125],
+       [0.625, 0.375],
+       [1.   , 0.   ],
+       [1.   , 0.   ],
+       [0.625, 0.375],
+       [1.   , 0.   ],
+       [0.625, 0.375],
+       [0.625, 0.375],
+       [0.625, 0.375],
+       [0.125, 0.875],
+       [0.25 , 0.75 ],
+       [0.5  , 0.5  ],
+       [0.   , 1.   ],
+       [0.75 , 0.25 ],
+       [0.5  , 0.5  ],
+       [0.5  , 0.5  ],
+       [0.875, 0.125],
+       [0.375, 0.625],
+       [1.   , 0.   ],
+       [0.5  , 0.5  ],
+       [1.   , 0.   ],
+       [0.375, 0.625],
+       [0.   , 1.   ],
+       [0.75 , 0.25 ],
+       [0.375, 0.625],
+       [0.   , 1.   ],
+       [0.125, 0.875],
+       [0.375, 0.625],
+       [0.   , 1.   ],
+       [0.125, 0.875],
+       [0.125, 0.875],
+       [0.375, 0.625],
+       [0.875, 0.125],
+       [0.   , 1.   ],
+       [0.25 , 0.75 ],
+       [0.75 , 0.25 ],
+       [1.   , 0.   ],
+       [0.5  , 0.5  ],
+       [0.125, 0.875],
+       [0.125, 0.875],
+       [0.875, 0.125],
+       [1.   , 0.   ],
+       [0.125, 0.875],
+       [0.375, 0.625],
+       [0.5  , 0.5  ],
+       [0.   , 1.   ],
+       [0.875, 0.125],
+       [0.125, 0.875],
+       [0.25 , 0.75 ],
+       [0.25 , 0.75 ],
+       [0.875, 0.125]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Import fungsi confusion matrix dari package scikit-learn</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menampilkan confusion matrix dari hasil prediksi dengan metode KNN</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[25  5]
+ [ 7 24]]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menampilkan laporan klasifikasi yang berisi beberapa nilai dengan menggunakan fungsi ‘classification_report’ yang diimport dari package scikit-learn.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+           0       0.78      0.83      0.81        30
+           1       0.83      0.77      0.80        31
+
+    accuracy                           0.80        61
+   macro avg       0.80      0.80      0.80        61
+weighted avg       0.80      0.80      0.80        61
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Mengetahui nilai akurasi dengan model yang ada maka lakukan perhitungan berikut : (True Positive / True Negative )/ n berdasarkan nilai yang ada pada confusion matrix</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#accuracy = tp+tn/total</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="o">+</span><span class="mi">24</span><span class="p">)</span><span class="o">/</span><span class="mi">61</span>
+<span class="n">accuracy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8032786885245902
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Klasifikasi dengan Metode Naive Bayes</strong></p>
+<ul class="simple">
+<li><p>Klasifikasi selanjutnya menggunakan metode Naive Bayes dengan mengimport fungsi GaussianNB dari package scikit-learn.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Mengaktifkan atau memanggil fungsi klasifikasi Naive Bayes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modelnb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Memasukkan data training pada fungsi klasifikasi Naive Bayes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbtrain</span> <span class="o">=</span> <span class="n">modelnb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Selanjutnya menghitung jumlah pada class-class dari model nbtrain</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbtrain</span><span class="o">.</span><span class="n">class_count_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([108., 134.])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menentukan hasil prediksi dari x_test yang disebut dengan y prediksi</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">nbtrain</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+<span class="n">y_pred</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0,
+       1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+       1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menentukan probabilitas hasil prediksi</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbtrain</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.82519301e-04, 9.99417481e-01],
+       [9.99240660e-01, 7.59340083e-04],
+       [9.99938876e-01, 6.11239119e-05],
+       [9.99992659e-01, 7.34091227e-06],
+       [3.63340453e-03, 9.96366595e-01],
+       [9.99951075e-01, 4.89245485e-05],
+       [8.58705904e-03, 9.91412941e-01],
+       [5.98824205e-01, 4.01175795e-01],
+       [5.96179179e-04, 9.99403821e-01],
+       [9.33512783e-01, 6.64872171e-02],
+       [9.97942511e-01, 2.05748946e-03],
+       [4.57119010e-01, 5.42880990e-01],
+       [9.99999986e-01, 1.36201854e-08],
+       [9.99995731e-01, 4.26929475e-06],
+       [5.16997591e-01, 4.83002409e-01],
+       [1.00000000e+00, 5.08299544e-11],
+       [9.10170340e-01, 8.98296597e-02],
+       [9.86810593e-01, 1.31894074e-02],
+       [5.72080552e-01, 4.27919448e-01],
+       [2.24337668e-01, 7.75662332e-01],
+       [1.35284858e-01, 8.64715142e-01],
+       [9.99163391e-01, 8.36609347e-04],
+       [4.11790193e-05, 9.99958821e-01],
+       [9.82142823e-01, 1.78571775e-02],
+       [9.87489096e-01, 1.25109042e-02],
+       [6.12759776e-01, 3.87240224e-01],
+       [9.98445661e-01, 1.55433916e-03],
+       [5.27232672e-01, 4.72767328e-01],
+       [9.99999798e-01, 2.01856111e-07],
+       [8.92627151e-01, 1.07372849e-01],
+       [9.99977533e-01, 2.24667494e-05],
+       [2.83023411e-01, 7.16976589e-01],
+       [6.30760484e-02, 9.36923952e-01],
+       [9.99898800e-01, 1.01200020e-04],
+       [3.84306462e-01, 6.15693538e-01],
+       [2.48949756e-04, 9.99751050e-01],
+       [3.27889442e-02, 9.67211056e-01],
+       [1.25745005e-01, 8.74254995e-01],
+       [2.46741514e-04, 9.99753258e-01],
+       [2.15031819e-02, 9.78496818e-01],
+       [6.63573068e-04, 9.99336427e-01],
+       [4.14588969e-01, 5.85411031e-01],
+       [9.99647039e-01, 3.52961351e-04],
+       [5.65032109e-04, 9.99434968e-01],
+       [9.19512676e-03, 9.90804873e-01],
+       [9.87382282e-01, 1.26177176e-02],
+       [9.99990911e-01, 9.08916230e-06],
+       [7.91419392e-01, 2.08580608e-01],
+       [1.38833356e-02, 9.86116664e-01],
+       [9.89424063e-03, 9.90105759e-01],
+       [9.96647120e-01, 3.35288023e-03],
+       [9.98756467e-01, 1.24353337e-03],
+       [6.90030756e-04, 9.99309969e-01],
+       [5.95624097e-01, 4.04375903e-01],
+       [8.21913920e-02, 9.17808608e-01],
+       [1.52844715e-01, 8.47155285e-01],
+       [9.95476571e-01, 4.52342903e-03],
+       [2.45411515e-02, 9.75458848e-01],
+       [9.92419374e-01, 7.58062589e-03],
+       [8.00325611e-02, 9.19967439e-01],
+       [9.97809190e-01, 2.19080978e-03]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Import fungsi confusion matrix dari package scikit-learn</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menampilkan confusion matrix dari hasil prediksi dengan metode Naive Bayes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[27,  3],
+       [ 7, 24]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menampilkan laporan klasifikasi yang berisi beberapa nilai dengan menggunakan fungsi ‘classification_report’ yang diimport dari package scikit-learn.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+           0       0.79      0.90      0.84        30
+           1       0.89      0.77      0.83        31
+
+    accuracy                           0.84        61
+   macro avg       0.84      0.84      0.84        61
+weighted avg       0.84      0.84      0.84        61
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Mengetahui nilai akurasi dengan model yang ada maka lakukan perhitungan berikut : (True Positive / True Negative )/ n berdasarkan nilai yang ada pada confusion matrix</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#accuracy = tp+tn/total</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">27</span><span class="o">+</span><span class="mi">24</span><span class="p">)</span><span class="o">/</span><span class="mi">61</span>
+<span class="n">accuracy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8360655737704918
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Kesimpulan</strong></p>
+<p><strong>Klasifikasi dengan Metode KNN</strong></p>
+<p><img alt="image.png" src="data:image/png;base64,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QQghhIgiBSGEECKKFIQQQogoUhBCCCGiSEEIIYSIIgUhhBAiyk0jRoz4p/67EEI0CePGjXOTJk1yrVu3dleuXHFr1qxxGzZsqC+N06tXLzd79mzXrVs3v508btasWW7YsGH++6lTp9ySJUvc0aNH/XatE9b90KFDbsGCBf774MGD3cyZM1379u3d+vXr3erVq/3+UpEHIYRoUpi0JkyY4Cf3adOm+b9ss78Qzz//vDt8+LA/hs/GjRvdyJEjfdnkyZPd7bff7t555x1fxu+mT5/uy2qd+fPnN6i7KQeUMMph69at7uLFi35fY2nVu3fvd+u/Vz1U+I033nDPPfece/bZZ92jjz7qfv75Z3f+/HlfTieZM2eOL+Nz8803u927d/syhPjSSy/5/ZwHLXvrrbe6N9980129etUdOHDAd9Bwm2Puuece9/LLL3trx447ceKE19gzZszI/a++ffu67du3+/+FpfP222+7KVOm+DK7Tq5tzJgxbsuWLf53/D8atWPHjrnrFKLWYVzcdNNN7uOPP/bbTz31lB8/586dKzgO7rjjDjdixAj3119/+Q8K4/jx495L4PuOHTvct99+68ffE0884W655ZbceK1VmEMefPBB98knn7j9+/fX770Gc9iXX37pvw8fPtzLorHzTKY8CFxJJmWzIC5cuOBGjRrly1AOY8eOdatWrcqVmzvFRN+hQ4echmVyL1VQQ4cOdcuWLfPHnTx50tXV1fn9S5cuzf2fDz/80GtwGsvcYK7NyufOnes78ddff+06d+6cs5T4e+nSJbdt2za/LURLoGvXru706dP+O2OTbSavHj16+H35YDzjbWCsvffee14hMA4ZU23atHFnzpzxY2revHlu3759PgTVs2fP+qNrE5tLXnzxRbdy5Ur/YX6rFJlSEAiDDmGC6NOnT65TDRw40O3ates/cUyOoQOxP008cu/evTllguvG/wcUkl0HngHWCp1x0KBBvrPSkZNwDWfPns01KtdMJ28pcVIhjLZt27pFixZ5RWEhkWIw5lAOjC0MQQzCcDLs16+fD6msXbu2RRld3JP58ccfc8bqnXfe6aMdlSBTCoLOgRVvljlWR3PABD969Gh/08capdQY3y+//OLdvUceecR7NQotiZYGSgFDyjwAvG7GAuGiQoRGIB/uQeC5o2wuX76c8/YpM8/h2LFj/m8t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" /></p>
+<p><img alt="image.png" src="data:image/png;base64,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" /></p>
+<p>Dengan menggunakan metode KNN diperoleh nilai akurasi sebesar 0.803 atau 80.3% dengan nilai rata-rata precisision untuk klasifikasi 0 dan 1 sebesar 0.80, recall sebesar 0.80, f1-score sebesar 0.80 dengan total support masing-masing 30 untuk klasifikasi 0 (tidak melakukan transfusi) dan 31 untuk klasifikasi 1 (melakukan transfusi) sehingga diperoleh total sebanyak 61</p>
+<p><strong>Klasifikasi dengan Metode Naive Bayes</strong></p>
+<p><img alt="image.png" src="data:image/png;base64,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" /></p>
+<p><img alt="image.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAAaCAYAAABYbdUGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAWoSURBVGhD7ZpLSFZbFICX91ZkJZSFivnAqFBSME3ogQ0MDVIkSsJJowKdmOBAhMCujqKZNFDBGjkKcZARRBRElBYJQWXRw0FlEWUFlo8e3Nu3+vff9njO+a+e6f7g8J+z136svfZaa+8tJu3cufNfcTiWyF+xX4djSTgHckTCOZAjEs6BHJFwDuSIhHMgRySWdI1vamqS4uJifZ+cnJSuri6ZmJjQ7yA2btwozc3Nsn79ev3+8eOHDAwMyNWrV+XIkSOyf/9+LYeXL19KR0dH7Etk27Zt0tjYKKtWrZrXDk6dOiU5OTn67m1n92v0BFsP+D+yPXv2zNPRcOXKFbl161bg3GxbGYw8Pz8/UOZt62dnY5eZmZm4zGvnIJtMT09LT0+PPHr0SMttG4NXHsSiHQgFduzYEVeYSaamps5T0g/qwdmzZ/WXfgoKCha0YyLHjx+Xy5cvqxErKyulrq5Orl27JhcuXIjV+o13bJzp48ePOgayrVu3LjCCMfC9e/cW9Bcm8+LV0ybMJsznwIED0tfXt2BxbBn9h9nZ6Pr161dZvXp1vB42gCCbZGdny8OHD6WsrGyebaj3+PHj+LypC2a9gljUFobSTAoDG29HoQ0bNuiEw3j37p0UFhaqkUw/TMxLZmam/r5580Z/iVIm7F1Qxtu0aZPcvn07/o0e6LN9+3bJyMiQixcvJoygpVJRUSGfP39e4DzAQvvNDXbv3i3j4+O+ehkZ/Say86FDh9R5WHQD9VasWBG3CSBHH8AZWltbZXZ2Vr9t0Le8vFz75yH4WLNELMqB1q5dK8uXL5dPnz7pIG1tbfL8+XNNu2bhg8ABSM1kk87OTjWO7d1EwLlz56S+vl6Gh4fVwMZwGKW3t1fltGFs29FwStLvgwcPVD/kpGKijDY8JjINpHEjIxvahMmA/m3nBXQwOpIRBgcHY5I/UAcbXr9+PVbyB1uWyM7UZXzsaYOzffv2TYMOTKCiD+9hYNebN29KS0uLnDhxQoMvURaGv7Oysv6JvSckLS1NSkpKdCLV1dU6yNjYmJY9e/ZMoycIFqKmpkYnTUbhPS8vT+7evavyGzduaH8vXryQw4cPS0pKirx69Up+bbGyZs0aOXPmjPT398vmzZultLRUZVu2bJHk5GTZu3evpuOfP39q2du3b7Xe69ev5eTJkzI6OqrRtW7dOhkZGdGswVg8K1eulH379snc3Jzcv38/UGbPDSdPSkqS8+fPx0pE5ZcuXdJ2LGBVVZXaZmpqKlZD5OjRo+rw1PNiy8LsTFbYtWuX6slcTDDduXNHx/rw4YMGAIHKnDkDoevQ0FBspN8BkJubq0H8/v17LWPLon8c6cuXL3Lw4EGdf6IMvqgMRGr9/v27FBUV6YIxCe+WEwTnHRyHNjycacgu3shA4adPn0p6enqsROKpHDAgEUWkLVu2TB3l9OnT2g4HQT8OlRwCTaTTlnRv92mgHXX98JMR/aR3O/t4MeOSSQwEEFuQX/bxysLsjHOxPePEZDuchQMzWZ1+0BlnOHbsmDQ0NKidgrZTg8n0ZCDak3kIJtYsEYtyIBaCyMfLGQjYt5mw+UYZsoXZamzMXgx+iwm0MfuvGc+eCO+UkbHQg3fqmXTNN5HJApjx+WUxnzx5ot82Fb/OMtQlwr34yZgv47KoQdAOsAsY3QgMYyeDnyzMzt3d3eoc5uEWyA2tvb19wZaDQ2FLP6f1w14Te63CWNI1nvNE0NUZg3A7YGuxT/mm3Fwv7Wui3Z99jQVvO3s8r4yoMecqMgVpnCwFGBoDe9vY1+MwGdBnbW2tbim2A3nH8rs6s53Y9jCEycLsbKA9Dmj05JusBF79bZnB1CHA7Gu8t20Q7t85HJFwf4l2RMI5kCMSzoEckXAO5IiEcyBHJJwDOSLhHMgRCedAjkg4B3JEwjmQIwIi/wGiEd+teeeMUwAAAABJRU5ErkJggg==" /></p>
+<p>Dengan menggunakan metode Naive Bayes diperoleh nilai akurasi sebesar 0.836 atau 83.6% dengan nilai rata-rata precisision untuk klasifikasi 0 dan 1 sebesar 0.84, recall sebesar 0.84, f1-score sebesar 0.84 dengan total support masing-masing 30 untuk klasifikasi 0 (tidak melakukan transfusi) dan 31 untuk klasifikasi 1 (melakukan transfusi) sehingga diperoleh total sebanyak 61</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugaspendat"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tugas2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas 2 : Naive Bayes Iris Dataset</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Tugas3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tugas 3 : Decision Tree</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 21-001 Achmad Baharuddin Akbar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
